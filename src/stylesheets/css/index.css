@@ -1,0 +1,71 @@
+body {
+  padding: 0; }
+
+#campaigns {
+  width: 1200px;
+  height: 180px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  position: relative; }
+  #campaigns:before, #campaigns:after {
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    bottom: 0; }
+  #campaigns:before {
+    background: url("https://i.hizliresim.com/a1z4D2.png") scroll no-repeat left bottom;
+    position: absolute;
+    width: 75%;
+    left: 0;
+    z-index: -3; }
+  #campaigns:after {
+    background: url("https://i.hizliresim.com/a1z4D2.png") scroll no-repeat right bottom;
+    width: 50%;
+    right: 0;
+    z-index: -1; }
+  #campaigns .item {
+    height: 140px;
+    background: url() no-repeat center center/cover;
+    display: inline-block;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15), 0 5px 2px rgba(0, 0, 0, 0.25);
+    transform: scale(0);
+    margin-right: 0px;
+    width: 0;
+    position: relative;
+    left: 100px;
+    filter: blur(10px);
+    transition: all .5s; }
+    #campaigns .item:last-child {
+      margin-right: 0; }
+    #campaigns .item.active {
+      transform: scale(1);
+      left: 0px;
+      margin-right: 7px;
+      filter: blur(0px);
+      width: 220px; }
+
+@media screen and (max-width: 1219px) {
+  #campaigns {
+    width: 970px;
+    height: 178px; }
+  #campaigns .item:last-child {
+    margin-right: -9px; } }
+
+@media screen and (max-width: 1000px) {
+  #campaigns {
+    width: 750px;
+    height: 178px; } }
+
+@media screen and (max-width: 767px) {
+  #campaigns {
+    width: 530px; } }
+
+@media screen and (max-width: 550px) {
+  #campaigns {
+    width: 100%; } }
+
+@media screen and (max-width: 475px) {
+  #campaigns {
+    display: none; } }
