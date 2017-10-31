@@ -44,6 +44,7 @@ body {
         margin: -2.7px;
         opacity: 0;
         top: -100px;
+        overflow: hidden;
 
         img {
             width: 100%;
@@ -166,7 +167,7 @@ body {
     }
     
     #campaigns {
-        height: 228px;
+        height: 220px;
     }
     #campaigns .controls {
         display: block

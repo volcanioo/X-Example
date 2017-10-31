@@ -40,6 +40,7 @@ body {
     margin: -2.7px;
     opacity: 0;
     top: -100px;
+    overflow: hidden;
     transition: all .5s;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
@@ -135,6 +136,6 @@ body {
     width: 300px !important;
     height: 180px !important; }
   #campaigns {
-    height: 228px; }
+    height: 220px; }
   #campaigns .controls {
     display: block; } }
