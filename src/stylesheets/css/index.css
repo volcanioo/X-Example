@@ -28,7 +28,6 @@ body {
     z-index: -1; }
   #campaigns .item {
     height: 140px;
-    background: url(http://psdownload.net/wp-content/uploads/2015/05/psdownload.net_2015-05-17_11-52-13.jpg) no-repeat center center/cover;
     display: inline-block;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15), 0 5px 2px rgba(0, 0, 0, 0.25);
     transform: scale(0);
@@ -38,6 +37,16 @@ body {
     left: 100px;
     filter: blur(10px);
     transition: all .5s; }
+    #campaigns .item:nth-child(1) {
+      background: url(https://www.burgerking.com.tr/cmsfiles/widgets/big-king-menu-12-50-tl-1.jpg?v=115) no-repeat center center/cover; }
+    #campaigns .item:nth-child(2) {
+      background: url(https://www.burgerking.com.tr/cmsfiles/widgets/menu-yaninda-12li-sogan-halkasi.jpg?v=115) no-repeat center center/cover; }
+    #campaigns .item:nth-child(3) {
+      background: url(https://www.burgerking.com.tr/cmsfiles/widgets/franchise.jpg?v=115) no-repeat center center/cover; }
+    #campaigns .item:nth-child(4) {
+      background: url(https://www.burgerking.com.tr/cmsfiles/widgets/ara-gelsin.jpg?v=115) no-repeat center center/cover; }
+    #campaigns .item:nth-child(5) {
+      background: url(https://www.burgerking.com.tr/cmsfiles/widgets/trans-yag-1.jpg?v=115) no-repeat center center/cover; }
     #campaigns .item:last-child {
       margin-right: 0; }
     #campaigns .item.active {
