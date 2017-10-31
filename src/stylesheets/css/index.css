@@ -29,34 +29,45 @@ body {
   #campaigns .item {
     height: 140px;
     display: inline-block;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15), 0 5px 2px rgba(0, 0, 0, 0.25);
-    transform: scale(0);
+    transform: scale(0.6);
+    -moz-transform: scale(0.6);
+    -o-transform: scale(0.6);
+    -webkit-transform: scale(0.6);
     margin-right: 0px;
     width: 0;
     position: relative;
     left: 100px;
     margin: -2.7px;
+    opacity: 0;
+    top: -100px;
     filter: blur(10px);
-    transition: all .5s; }
-    #campaigns .item:nth-child(1) {
-      background: url(https://www.burgerking.com.tr/cmsfiles/widgets/big-king-menu-12-50-tl-1.jpg?v=115) no-repeat center center/cover; }
-    #campaigns .item:nth-child(2) {
-      background: url(https://www.burgerking.com.tr/cmsfiles/widgets/menu-yaninda-12li-sogan-halkasi.jpg?v=115) no-repeat center center/cover; }
-    #campaigns .item:nth-child(3) {
-      background: url(https://www.burgerking.com.tr/cmsfiles/widgets/franchise.jpg?v=115) no-repeat center center/cover; }
-    #campaigns .item:nth-child(4) {
-      background: url(https://www.burgerking.com.tr/cmsfiles/widgets/ara-gelsin.jpg?v=115) no-repeat center center/cover; }
-    #campaigns .item:nth-child(5) {
-      background: url(https://www.burgerking.com.tr/cmsfiles/widgets/trans-yag-1.jpg?v=115) no-repeat center center/cover; }
+    -ms-filter: blur(10px);
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s; }
+    #campaigns .item img {
+      width: 100%; }
     #campaigns .item:last-child {
       margin-right: 0; }
     #campaigns .item.active {
       margin: 0px;
+      top: 0px;
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15), 0 5px 2px rgba(0, 0, 0, 0.25);
       transform: scale(1);
+      opacity: 1;
+      -moz-transform: scale(1);
+      -o-transform: scale(1);
+      -webkit-transform: scale(1);
       left: 0px;
       margin-right: 7px;
       filter: blur(0px);
-      width: 220px; }
+      -ms-filter: blur(0px);
+      width: 220px;
+      transition: all .5s;
+      -webkit-transition: all .5s;
+      -moz-transition: all .5s;
+      -o-transition: all .5s; }
   #campaigns .controls {
     background: url(https://i.hizliresim.com/AyzgMX.png) no-repeat center center/contain;
     width: 100px;
