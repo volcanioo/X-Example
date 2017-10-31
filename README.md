@@ -15,3 +15,16 @@ Baya bir yol kat ettim. Hammerjs kullanarak swipe efekti hakkinda detayli bilgiy
 ### Maddeler
 
 * Hammerjs kullandim cunku hem dosya yuku cok azdi, hemde anlasilabilir bir dokumantasyona sahipti. Swipe plugini olarak sanirim gordugum bir cok plugin arasindaki en iyisi buydu.
+
+## Final
+Genel olarak anladigim kadariyla sizin ilgi odaginiz html ve css'ten cok js bilgim idi anladigim kadariyla o yuzden ben kusursuz sekilde yapabilecegim hover vb. islemlere onem vermektense genelde daha cok javascript scriptine deger vermeye calistim.
+
+- Proje genelinde jquery kullanmadim cunku bu kadar ufak bir script icin, jQuery kullanmak gereksiz yere 40+ KB saglayacakti ben bu yuku 4.6KB icerisinde cozdum. Ancak swipe efekti icin kullanmam gereken kutuphanenin boyutu 20.3KBlik bir dezavantaj yaratti. Genel olarak kutuphaneler konusunda gene tasarruftayiz.
+- Projenin toplam suresi assagi yukari 7-8 saat civari surdu. 
+- Sizin yaptiginiz sablon mantiginda position: absolute mantigi ile gelistirme saglanmis. O alanda ciddi anlamda kullanilan element sayisi ortaya ciktigi zaman acik ara bir performans kaybi yasayacagimizdan dolayi ben css arayuzunu tamamen relative kullanarak gelistirdim.
+- Gelistirdigim yapida gereksiz element kullanimindan kacindim. Genel olarak kurguladigim sablonda mobile gelince tum konsepti yok etmektense ortada duran konseptin uzerine yonelmeye devam ettim. Insanlara farki gorebilmelerini saglayabilmek icin.
+- Image kullanimindan elimden geldigince kacindim ve arrowlar disinda baska bir seyi svg olarak kullanamayacagimdan sadece arrowlari svg kullanarak performans ve goruntu acisindan tasarruf ettim.
+- Pure javascript ile gelistirdigim icin ciddi bir zaman kaybi yasadim ama bu genel olarak bana buyuk bir katki sagladi en azindan ilk canli projemi olusturmus oldum. Kendimi bu gibi zamanlarda gelistirmeyeceksem normal zaman dilimlerinin anlami maalesef yok. Bu yuzden responsive images olusturmaya calisip sizi daha fazla bekletmek istemedim.
+
+## Son Olarak
+Bana boyle bir calisma yarattiginiz icin tesekkur ederim. 2 gun icerisinde cok ciddi seyler ogrendim, bu scriptin bazi noktalarini bularak gelistirmeye ve arge surecine girmesine zamanla izin verecegim. Bu repo icerisinde hic biryerde projeyi kim icin nasil yaptigima dair bir bilgi bulunmamakla beraber, sizi etkilemeyecek sekilde tum onlemleri almis bulunmaktayim.
