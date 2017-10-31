@@ -1,32 +1,118 @@
+// Container
+const campaignsContainer = document.getElementById('campaigns');
 
-window.onload = function() {
+// All Items
+const items = document.querySelectorAll('.item');
 
-    // Container
-    const campaignsContainer = document.getElementById('campaigns');
+// Showing Item Counter
+const showingItemCount = Math.floor(campaignsContainer.clientWidth/(220+10));
 
-    // All Items
-    const items = document.querySelectorAll('.item');
+// Get Last Index
+function getLastIndex() {
+    var domElements = document.body.querySelectorAll('.item');
+    let _index = 0;
+    for(var i=0;i<domElements.length;i++){
+       if(domElements[i].className==="item active"){
+          _index = i
+       }
+    }
+    return _index;
+}
 
-    // Showing Item Counter
-    const showingItemCount = Math.floor(campaignsContainer.clientWidth/(220+10));
-    const hideElementCount = items.length - showingItemCount;
+// Get Items By Size
+function getItemsBySize(showingItemCount) {
     
     // Showing Item Add Active Class
+    for (i = 0; i < items.length; ++i) {
+        items[i].classList.remove('active');
+    }
     for (i = 0; i < showingItemCount; ++i) {
         items[i].classList.add('active');
     }
+
+}
+
+// Next
+function nextSlides(_showingItemCount) {
     
-    // Next
-    document.getElementById('dur').onclick = function() {
-        let _lastActiveIndex = getLastIndex(document.querySelectorAll('.item'));
-        if (1 == 1) {
-            //for (i = 0; i < hideElementCount; i++) items[i].classList.remove('active');
-            //for (i = _lastActiveIndex; i <= _lastActiveIndex+2; i++) items[i].classList.add('active');
-            console.log(_lastActiveIndex)
+    let _hideElementCount = items.length - _showingItemCount;
+    let _lastActiveIndex = getLastIndex();
+    if (_lastActiveIndex < items.length-1) {
+        for (i = 0; i < _hideElementCount; i++) items[i].classList.remove('active');
+        if(_showingItemCount != 1) {
+            for (i = _lastActiveIndex; i < _lastActiveIndex+_showingItemCount; i++) items[i].classList.add('active');
+        } else {
+            items[_lastActiveIndex+1].classList.add('active');
         }
+    } else {
+        for (i = 0; i < items.length; i++) items[i].classList.remove('active');
+        for (i = 0; i < _showingItemCount; i++) items[i].classList.add('active');
     }
 
+}
+
+// Prev
+function prevSlides(_showingItemCount) {
+
+    let _hideElementCount = items.length - _showingItemCount;
+    let _lastActiveIndex = getLastIndex();
+    if (_lastActiveIndex > items.length-1) {
+        for (i = 0; i < _hideElementCount; i++) items[i].classList.remove('active');
+        if(_showingItemCount != 1) {
+            for (i = _lastActiveIndex; i < _lastActiveIndex+_showingItemCount; i++) items[i].classList.add('active');
+        } else {
+            items[_lastActiveIndex-1].classList.add('active');
+        }
+    } else if(_lastActiveIndex==0) {
+        for (i = 0; i < items.length; i++) items[i].classList.remove('active');
+        items[items.length-1].classList.add('active');
+    } else {
+        for (i = 0; i < items.length; i++) items[i].classList.remove('active');
+        items[_lastActiveIndex-1].classList.add('active');
+    }
+
+}
+
+// Resize
+window.onresize = function() {
+
+    // Showing Item Counter
+    let showingItemCount = Math.floor(campaignsContainer.clientWidth/(220+10));
+    getItemsBySize(showingItemCount);
+    
+    document.getElementById('dur').onclick = function() {
+        nextSlides(showingItemCount);
+    }
+
+}
+
+// Load
+window.onload = function() {
+    
+    // Showing Item Counter
+    let showingItemCount = Math.floor(campaignsContainer.clientWidth/(220+10));
+    getItemsBySize(showingItemCount);
+
+    document.getElementById('next').onclick = function() {
+        nextSlides(showingItemCount);
+    }
+    document.getElementById('prev').onclick = function() {
+        prevSlides(showingItemCount);
+    }
+
+    // Swipe
+    var myElement = document.getElementById('campaigns');
+    var mc = new Hammer(myElement);
+    
+    mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+    
+    mc.on("panleft panright panup pandown tap press", function(ev) {
+        console.log(ev.type);
+    });
+    
 };
+
+
 
 // get index methodu yazilmasi gerekiyor.
 // indexten sonraki 2 tane acilacak, onceki 2 tane kapanacak.
