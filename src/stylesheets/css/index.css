@@ -55,30 +55,58 @@ body {
       margin-right: 7px;
       filter: blur(0px);
       width: 220px; }
+  #campaigns .controls {
+    background: url(https://i.hizliresim.com/AyzgMX.png) no-repeat center center/contain;
+    width: 100px;
+    height: 39px;
+    position: absolute;
+    right: 50px;
+    bottom: 5px;
+    display: none; }
+    #campaigns .controls button {
+      background: transparent;
+      border: none;
+      color: #382617;
+      line-height: 54px;
+      width: 13px;
+      text-align: center;
+      display: inline-block;
+      padding: 0;
+      outline: none; }
 
 @media screen and (max-width: 1219px) {
   #campaigns {
     width: 970px;
     height: 178px; }
   #campaigns .item:last-child {
-    margin-right: -9px; } }
+    margin-right: -9px; }
+  #campaigns .controls {
+    display: block; } }
 
 @media screen and (max-width: 1000px) {
   #campaigns {
     width: 750px;
-    height: 178px; } }
+    height: 178px; }
+  #campaigns .controls {
+    display: block; } }
 
 @media screen and (max-width: 767px) {
   #campaigns {
-    width: 530px; } }
+    width: 530px; }
+  #campaigns .controls {
+    display: block; } }
 
 @media screen and (max-width: 550px) {
   #campaigns {
-    width: 100%; } }
+    width: 100%; }
+  #campaigns .controls {
+    display: block; } }
 
 @media screen and (max-width: 475px) {
   .item.active {
     width: 300px !important;
     height: 180px !important; }
   #campaigns {
-    height: 220px; } }
+    height: 220px; }
+  #campaigns .controls {
+    display: block; } }
