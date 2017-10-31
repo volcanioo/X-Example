@@ -39,6 +39,7 @@ body {
         width: 0;
         position: relative;
         left: 100px;
+        margin: -2.7px;
         filter: blur(10px);
 
         &:nth-child(1) {
@@ -62,6 +63,7 @@ body {
             margin-right: 0;
         }
         &.active {
+            margin: 0px;
             transform: scale(1);
             left: 0px;
             margin-right: 7px;

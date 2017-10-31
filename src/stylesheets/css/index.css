@@ -35,6 +35,7 @@ body {
     width: 0;
     position: relative;
     left: 100px;
+    margin: -2.7px;
     filter: blur(10px);
     transition: all .5s; }
     #campaigns .item:nth-child(1) {
@@ -50,6 +51,7 @@ body {
     #campaigns .item:last-child {
       margin-right: 0; }
     #campaigns .item.active {
+      margin: 0px;
       transform: scale(1);
       left: 0px;
       margin-right: 7px;
